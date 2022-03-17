@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#E8DADA"
+    android:padding="20dp"
+    >
+
+    <Switch
+        android:id="@+id/MainSwitch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#30000000"
+        android:gravity="center"
+        android:layout_marginTop="25dp"
+        android:text=" Enable Temp Converter"
+        android:textStyle="bold"
+        android:textSize="15dp"/>
+
+    <TextView
+        android:id="@+id/HeadLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:gravity="center"
+        android:text="Currency Converter"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/LinearLay"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_below="@+id/HeadLine"
+        android:layout_marginTop="30dp"
+        >
+
+        <EditText
+            android:id="@+id/EditText1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:hint="Enter A Value"
+            android:gravity="center"
+            android:inputType="numberDecimal"
+            android:background="#30000000"
+            android:layout_marginRight="5dp"
+            />
+
+        <TextView
+            android:id="@+id/Display"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="30dp"
+            android:layout_weight="1"
+            android:background="#30000000"
+            android:layout_marginLeft="5dp"
+            />
+    </LinearLayout>
+
+
+    <RadioGroup
+        android:id="@+id/RadioGroup1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/LinearLay"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+        >
+
+        <RadioButton
+            android:id="@+id/Doller2Taka"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Doller To Taka"
+            android:textStyle="bold"
+            android:layout_marginRight="5dp"
+            />
+
+        <RadioButton
+            android:id="@+id/Taka2Doller"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Taka To Doller"
+            android:textStyle="bold"
+            android:layout_marginLeft="5dp"
+            />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/ConvertBt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/RadioGroup1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:text="Convert"
+        android:textStyle="bold" />
+
+</RelativeLayout>
